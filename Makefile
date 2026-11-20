@@ -8,9 +8,9 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = NotificationCenterLite
 
 NotificationCenterLite_FILES = Tweak.xm
-NotificationCenterLite_FRAMEWORKS = UIKit QuartzCore Foundation CoreGraphics
+NotificationCenterLite_FRAMEWORKS = UIKit QuartzCore Foundation CoreGraphics MediaPlayer
 NotificationCenterLite_LIBRARIES = substrate
-NotificationCenterLite_LDFLAGS = -lobjc
+NotificationCenterLite_LDFLAGS = -lobjc -Wl,-undefined,dynamic_lookup
 NotificationCenterLite_USE_MODULES = 0
 NotificationCenterLite_CFLAGS = -fno-modules -Wno-deprecated-declarations
 
