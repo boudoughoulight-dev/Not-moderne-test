@@ -1,0 +1,21 @@
+name: Compiler le deb
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Randomblock1/theos-action@v1
+      - name: Installer les SDK
+        run: |
+          git clone --depth=1 https://github.com/theos/sdks.git /tmp/sdks
+          cp -R /tmp/sdks/*.sdk $THEOS/sdks/
+          ls $THEOS/sdks
+      - name: Compiler
+        run: make package FINALPACKAGE=1 messages=yes
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deb
+          path: packages/*.deb
