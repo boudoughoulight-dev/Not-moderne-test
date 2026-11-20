@@ -1,17 +1,17 @@
-export ARCHS = armv7
-export TARGET := iphone:clang:10.3:7.0
 
-INSTALL_TARGET_PROCESSES = SpringBoard
+ARCHS = armv7
+TARGET = iphone:clang:9.3:9.0
+
+THEOS_PACKAGE_SCHEME = rootless
+PACKAGE_FORMAT = deb
 
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = NotificationCenterLite
 
 NotificationCenterLite_FILES = Tweak.xm
-NotificationCenterLite_FRAMEWORKS = UIKit QuartzCore Foundation CoreGraphics MediaPlayer
-NotificationCenterLite_LIBRARIES = substrate
-NotificationCenterLite_LDFLAGS = -lobjc -Wl,-undefined,dynamic_lookup
-NotificationCenterLite_USE_MODULES = 0
-NotificationCenterLite_CFLAGS = -fno-modules -Wno-deprecated-declarations
+NotificationCenterLite_FRAMEWORKS = UIKit Foundation QuartzCore
+NotificationCenterLite_CFLAGS = -fobjc-arc
+NotificationCenterLite_LDFLAGS =
 
 include $(THEOS_MAKE_PATH)/tweak.mk
