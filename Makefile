@@ -8,7 +8,7 @@ TWEAK_NAME = NotificationCenterLite
 NotificationCenterLite_FILES = Tweak.xm
 NotificationCenterLite_FRAMEWORKS = UIKit Foundation QuartzCore MediaPlayer
 NotificationCenterLite_USE_MODULES = 0
-NotificationCenterLite_CFLAGS = -fno-modules
+NotificationCenterLite_CFLAGS = -fobjc-arc -fno-modules
 NotificationCenterLite_LDFLAGS = -Wl,-undefined,dynamic_lookup
 
 include $(THEOS_MAKE_PATH)/tweak.mk
