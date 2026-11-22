@@ -1,0 +1,9 @@
+Package: com.ncl.notificationcenterlite
+Name: NotificationCenterLite
+Description: Centre de notifications style iOS 18 (sans bordure, glisser depuis le haut)
+Maintainer: NCL
+Author: NCL
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 9.0)
+Architecture: iphoneos-arm
+Version: 1.0.1
