@@ -1,0 +1,9 @@
+Package: com.meteo.widget
+Name: MeteoWidget
+Version: 2.0.0
+Architecture: iphoneos-arm
+Description: Widgets style iOS 14 pour l ecran d accueil (meteo, horloge, batterie, date)
+Maintainer: MeteoWidget
+Author: MeteoWidget
+Section: Tweaks
+Depends: mobilesubstrate, firmware (>= 9.0)
