@@ -1,0 +1,9 @@
+Package: com.example.dockios12
+Name: DockiOS12
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Dock flottant style iOS 12 pour iPad (coins arrondis, marges)
+Maintainer: toi
+Author: toi
+Section: Tweaks
+Depends: mobilesubstrate
