@@ -7,5 +7,6 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = DockiOS12
 DockiOS12_FILES = Tweak.x
 DockiOS12_CFLAGS = -fobjc-arc
+DockiOS12_LDFLAGS = -undefined dynamic_lookup
 
 include $(THEOS_MAKE_PATH)/tweak.mk
