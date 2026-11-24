@@ -69,7 +69,10 @@ static BOOL NameHas(UIView *v, NSString *part) {
         CGRect lf = list.frame;
         list.frame = CGRectMake(round((dockB.size.width - listW) / 2.0), lf.origin.y, listW, lf.size.height);
         SEL sel = NSSelectorFromString(@"layoutIconsNow");
-        if ([list respondsToSelector:sel]) [list performSelector:sel];
+        #pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+if ([list respondsToSelector:sel]) [list performSelector:sel];
+#pragma clang diagnostic pop
     }
 
     // 3) Le fond épouse les icônes réellement placées
