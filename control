@@ -6,4 +6,4 @@ Description: Widgets style iOS 14 pour l ecran d accueil (meteo, horloge, batter
 Maintainer: MeteoWidget
 Author: MeteoWidget
 Section: Tweaks
-Depends: mobilesubstrate, firmware (>= 9.0)
+Depends: mobilesubstrate, firmware (>= 8.0)
